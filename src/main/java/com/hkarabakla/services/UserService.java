@@ -1,6 +1,7 @@
 package com.hkarabakla.services;
 
 import com.hkarabakla.entities.Address;
+import com.hkarabakla.entities.Orders;
 import com.hkarabakla.entities.User;
 import com.hkarabakla.repositories.UserRepo;
 import org.springframework.stereotype.Component;
@@ -16,10 +17,10 @@ public class UserService {
 
     public void userOperations() {
         User u = new User();
-        u.setName("user");
+        u.setName("Jale");
 
         Address address = new Address();
-        address.setStreet("Gazo sokak");
+        address.setStreet("Gazi sokak");
         address.setNumber("7");
         address.setCity("Istanbul");
 
@@ -29,6 +30,6 @@ public class UserService {
 
         System.out.println(u.getId());
 
-        System.out.println(repo.findAllByNameContainingIgnoreCase("se"));
+        System.out.println(repo.findAllByNameContainingIgnoreCase("J"));
     }
 }
